@@ -25,6 +25,10 @@ app.use('/api/suppliers', supplierRoutes);
 app.use('/api/stores', storeRoutes);
 app.use('/api/purchases', purchaseRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+
+module.exports = app;
