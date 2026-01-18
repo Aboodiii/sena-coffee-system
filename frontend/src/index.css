@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --espresso: #2C1810;
+    --bean: #4B3621;
+    --coffee: #6F4E37;
+    --latte: #C0A080;
+    --cream: #F5F5DC;
+    --milk: #FFFFFF;
+    --paper: #FAFAF5;
+
+    --primary: var(--espresso);
+    --secondary: var(--coffee);
+    --accent: var(--latte);
+    --background: var(--paper);
+    --surface: #ffffff;
+    --text-main: var(--espresso);
+    --text-muted: #8D7B68;
+
+    --glass: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(111, 78, 55, 0.1);
+    --shadow: 0 12px 40px rgba(44, 24, 16, 0.08);
+    --radius: 20px;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    --error: #A64444;
+    --success: #4A6741;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: var(--background);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Premium Buttons */
+.btn-primary {
+    background: var(--espresso);
+    color: var(--cream);
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--espresso);
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(44, 24, 16, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--bean);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 24, 16, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--espresso);
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    border: 2px solid var(--espresso);
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background: var(--espresso);
+    color: var(--cream);
+}
+
+/* Premium Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--bean);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: 14px;
+    border: 1.5px solid rgba(111, 78, 55, 0.15);
+    background: var(--milk);
+    color: var(--espresso);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--coffee);
+    box-shadow: 0 0 0 4px rgba(111, 78, 55, 0.1);
+    background: white;
+}
+
+/* Glass Utility */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
